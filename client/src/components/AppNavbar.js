@@ -30,12 +30,20 @@ export class AppNavbar extends Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink
-                    href="https://github.com/KelvinMitaki/kevin-mern-stack-app"
+                  <Link
+                    to="https://github.com/KelvinMitaki/kevin-mern-stack-app"
                     target="_blank"
+                    onClick={event => {
+                      event.preventDefault();
+                      window.open(
+                        this.makeHref(
+                          "https://github.com/KelvinMitaki/kevin-mern-stack-app"
+                        )
+                      );
+                    }}
                   >
                     GitHub
-                  </NavLink>
+                  </Link>
                 </NavItem>
               </Nav>
             </Collapse>

@@ -78,6 +78,6 @@ export class ItemModal extends Component {
 }
 const mapStateToProps = state => ({
   item: state.item,
-  isAuthenticated: state.isAuthenticated
+  isAuthenticated: state.auth.isAuthenticated
 });
 export default connect(mapStateToProps, { postItem })(ItemModal);

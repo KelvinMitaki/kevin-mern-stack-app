@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const config = require("config");
-const db = config.get("mongoURI");
+const db = require("./config/key").mongoURI;
 const path = require("path");
 
 //use bodyParser middleware

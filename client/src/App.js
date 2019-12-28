@@ -18,14 +18,12 @@ export class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App">
-            <AppNavbar />
-            <Container>
-              {" "}
-              <Route exact path="/" component={ItemModal} />
-              <ShoppingList />
-            </Container>
-          </div>
+          <AppNavbar />
+          <Container>
+            {" "}
+            <Route exact path="/" component={ItemModal} />
+            <ShoppingList />
+          </Container>
         </Router>
       </Provider>
     );

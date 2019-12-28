@@ -6,14 +6,11 @@ import ShoppingList from "./components/ShoppingList";
 import { Provider } from "react-redux";
 import store from "./store";
 import ItemModal from "./components/ItemModal";
-import { loadUser } from "./actions/authAction";
+
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export class App extends Component {
-  componentDidMount() {
-    store.dispatch(loadUser());
-  }
   render() {
     return (
       <Provider store={store}>

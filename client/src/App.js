@@ -8,7 +8,7 @@ import store from "./store";
 import ItemModal from "./components/ItemModal";
 import { loadUser } from "./actions/authAction";
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export class App extends Component {
   componentDidMount() {
@@ -22,7 +22,9 @@ export class App extends Component {
           <Container>
             {" "}
             <Route exact path="/" component={ItemModal} />
-            <ShoppingList />
+            <Switch>
+              <ShoppingList />
+            </Switch>
           </Container>
         </Router>
       </Provider>

@@ -18,9 +18,7 @@ export const getItems = () => dispatch => {
         payload: res.data
       });
     })
-    .catch(err =>
-      dispatch(returnErrors(err.response.data, err.response.status))
-    );
+    .catch(err => dispatch(returnErrors(err.res.data, err.res.status)));
 };
 export const postItem = item => (dispatch, getState) => {
   axios
